@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon"
+        href="data:image/png;base64,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">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Level Test: A1 Level</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .carousel-control-prev-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2303396C' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+        }
+
+        .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2303396C' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>English Level Test</h1>
+        <h5>Difficulty: A1</h5>
+        <p id="thing" style="text-align: center;">Click on the correct answer for each question</p>
+        <div id="question-carousel" class="carousel slide" data-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="question" data-correct="C">
+                        <p>1. We ___ American.</p>
+                        <label class="radio"><input type="radio" name="q1" value="A"><span> A) not</span></label>
+                        <label class="radio"><input type="radio" name="q1" value="B"><span> B) not are</span></label>
+                        <label class="radio"><input type="radio" name="q1" value="C"><span> C) aren’t</span></label>
+                        <label class="radio"><input type="radio" name="q1" value="D"><span> D) isn’t</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="D">
+                        <p>2. ___ this magazine before?</p>
+                        <label class="radio"><input type="radio" name="q2" value="A"><span> A) Do you
+                                read</span></label>
+                        <label class="radio"><input type="radio" name="q2" value="B"><span> B) Are you going to
+                                read</span></label>
+                        <label class="radio"><input type="radio" name="q2" value="C"><span> C) Are you
+                                reading</span></label>
+                        <label class="radio"><input type="radio" name="q2" value="D"><span> D) Have you
+                                read</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="A">
+                        <p>3. This is our new teacher. ___ name is Mark.</p>
+                        <label class="radio"><input type="radio" name="q3" value="A"><span> A) His</span></label>
+                        <label class="radio"><input type="radio" name="q3" value="B"><span> B) Her</span></label>
+                        <label class="radio"><input type="radio" name="q3" value="C"><span> C) Its</span></label>
+                        <label class="radio"><input type="radio" name="q3" value="D"><span> D) He</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="B">
+                        <p>4. He ___ the newspaper every day.</p>
+                        <label class="radio"><input type="radio" name="q4" value="A"><span> A) read</span></label>
+                        <label class="radio"><input type="radio" name="q4" value="B"><span> B) reads</span></label>
+                        <label class="radio"><input type="radio" name="q4" value="C"><span> C) doesn’t
+                                reads</span></label>
+                        <label class="radio"><input type="radio" name="q4" value="D"><span> D) don’t
+                                reads</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="D">
+                        <p>5. Is Mont Blanc ___ mountain in Europe?</p>
+                        <label class="radio"><input type="radio" name="q5" value="A"><span> A) the higher</span></label>
+                        <label class="radio"><input type="radio" name="q5" value="B"><span> B) the most
+                                highest</span></label>
+                        <label class="radio"><input type="radio" name="q5" value="C"><span> C) the more
+                                high</span></label>
+                        <label class="radio"><input type="radio" name="q5" value="D"><span> D) the
+                                highest</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="B">
+                        <p>6. British people ___ tea with milk.</p>
+                        <label class="radio"><input type="radio" name="q6" value="A"><span> A) to drink</span></label>
+                        <label class="radio"><input type="radio" name="q6" value="B"><span> B) drink</span></label>
+                        <label class="radio"><input type="radio" name="q6" value="C"><span> C) drinks</span></label>
+                        <label class="radio"><input type="radio" name="q6" value="D"><span> D) are drink</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="A">
+                        <p>7. ___ you like Chinese food?</p>
+                        <label class="radio"><input type="radio" name="q7" value="A"><span> A) Do</span></label>
+                        <label class="radio"><input type="radio" name="q7" value="B"><span> B) Does</span></label>
+                        <label class="radio"><input type="radio" name="q7" value="C"><span> C) Are</span></label>
+                        <label class="radio"><input type="radio" name="q7" value="D"><span> D) Is</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="B">
+                        <p>8. It’s my ___ computer.</p>
+                        <label class="radio"><input type="radio" name="q8" value="A"><span> A) parents</span></label>
+                        <label class="radio"><input type="radio" name="q8" value="B"><span> B) parents’</span></label>
+                        <label class="radio"><input type="radio" name="q8" value="C"><span> C) parent</span></label>
+                        <label class="radio"><input type="radio" name="q8" value="D"><span> D) parent’s</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="C">
+                        <p>9. Could we ___ the bill, please?</p>
+                        <label class="radio"><input type="radio" name="q9" value="A"><span> A) take</span></label>
+                        <label class="radio"><input type="radio" name="q9" value="B"><span> B) want</span></label>
+                        <label class="radio"><input type="radio" name="q9" value="C"><span> C) have</span></label>
+                        <label class="radio"><input type="radio" name="q9" value="D"><span> D) ask</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="C">
+                        <p>10. The people ___ in room 12.</p>
+                        <label class="radio"><input type="radio" name="q10" value="A"><span> A) is</span></label>
+                        <label class="radio"><input type="radio" name="q10" value="B"><span> B) am</span></label>
+                        <label class="radio"><input type="radio" name="q10" value="C"><span> C) are</span></label>
+                        <label class="radio"><input type="radio" name="q10" value="D"><span> D) be</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="A">
+                        <p>11. It’s ten ___ seven.</p>
+                        <label class="radio"><input type="radio" name="q11" value="A"><span> A) to</span></label>
+                        <label class="radio"><input type="radio" name="q11" value="B"><span> B) for</span></label>
+                        <label class="radio"><input type="radio" name="q11" value="C"><span> C) at</span></label>
+                        <label class="radio"><input type="radio" name="q11" value="D"><span> D) in</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="C">
+                        <p>12. I ___ to classical music.</p>
+                        <label class="radio"><input type="radio" name="q12" value="A"><span> A) never to
+                                listen</span></label>
+                        <label class="radio"><input type="radio" name="q12" value="B"><span> B) listen
+                                never</span></label>
+                        <label class="radio"><input type="radio" name="q12" value="C"><span> C) never
+                                listen</span></label>
+                        <label class="radio"><input type="radio" name="q12" value="D"><span> D) don’t never
+                                listen</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="B">
+                        <p>13. Would you like ___ coffee?</p>
+                        <label class="radio"><input type="radio" name="q13" value="A"><span> A) other</span></label>
+                        <label class="radio"><input type="radio" name="q13" value="B"><span> B) another</span></label>
+                        <label class="radio"><input type="radio" name="q13" value="C"><span> C) some
+                                other</span></label>
+                        <label class="radio"><input type="radio" name="q13" value="D"><span> D) more one</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="D">
+                        <p>14. I haven’t ___ this photo before.</p>
+                        <label class="radio"><input type="radio" name="q14" value="A"><span> A) see</span></label>
+                        <label class="radio"><input type="radio" name="q14" value="B"><span> B) saw</span></label>
+                        <label class="radio"><input type="radio" name="q14" value="C"><span> C) to see</span></label>
+                        <label class="radio"><input type="radio" name="q14" value="D"><span> D) seen</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="A">
+                        <p>15. I can’t see. Where are my ___?</p>
+                        <label class="radio"><input type="radio" name="q15" value="A"><span> A) glasses</span></label>
+                        <label class="radio"><input type="radio" name="q15" value="B"><span> B) glass</span></label>
+                        <label class="radio"><input type="radio" name="q15" value="C"><span> C) cup</span></label>
+                        <label class="radio"><input type="radio" name="q15" value="D"><span> D) cups</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="B">
+                        <p>16. There aren’t ___ buses late in the evening.</p>
+                        <label class="radio"><input type="radio" name="q16" value="A"><span> A) some</span></label>
+                        <label class="radio"><input type="radio" name="q16" value="B"><span> B) any</span></label>
+                        <label class="radio"><input type="radio" name="q16" value="C"><span> C) no</span></label>
+                        <label class="radio"><input type="radio" name="q16" value="D"><span> D) a</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="A">
+                        <p>17. The car park is ___ to the restaurant.</p>
+                        <label class="radio"><input type="radio" name="q17" value="A"><span> A) next</span></label>
+                        <label class="radio"><input type="radio" name="q17" value="B"><span> B) opposite</span></label>
+                        <label class="radio"><input type="radio" name="q17" value="C"><span> C) behind</span></label>
+                        <label class="radio"><input type="radio" name="q17" value="D"><span> D) in front</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="A">
+                        <p>18. We go to work ___ bus.</p>
+                        <label class="radio"><input type="radio" name="q18" value="A"><span> A) by</span></label>
+                        <label class="radio"><input type="radio" name="q18" value="B"><span> B) with</span></label>
+                        <label class="radio"><input type="radio" name="q18" value="C"><span> C) on</span></label>
+                        <label class="radio"><input type="radio" name="q18" value="D"><span> D) to</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="C">
+                        <p>19. My brother ___ football.</p>
+                        <label class="radio"><input type="radio" name="q19" value="A"><span> A) don’t
+                                like</span></label>
+                        <label class="radio"><input type="radio" name="q19" value="B"><span> B) not like</span></label>
+                        <label class="radio"><input type="radio" name="q19" value="C"><span> C) doesn’t
+                                like</span></label>
+                        <label class="radio"><input type="radio" name="q19" value="D"><span> D) likes not</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="A">
+                        <p>20. It’s a busy, ___ street.</p>
+                        <label class="radio"><input type="radio" name="q20" value="A"><span> A) narrow</span></label>
+                        <label class="radio"><input type="radio" name="q20" value="B"><span> B) empty</span></label>
+                        <label class="radio"><input type="radio" name="q20" value="C"><span> C) quiet</span></label>
+                        <label class="radio"><input type="radio" name="q20" value="D"><span> D) clean</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="C">
+                        <p>21. We always ___ dinner at 7:15.</p>
+                        <label class="radio"><input type="radio" name="q21" value="A"><span> A) has</span></label>
+                        <label class="radio"><input type="radio" name="q21" value="B"><span> B) have got</span></label>
+                        <label class="radio"><input type="radio" name="q21" value="C"><span> C) have</span></label>
+                        <label class="radio"><input type="radio" name="q21" value="D"><span> D) are</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="D">
+                        <p>22. The office is closed ___ Saturday.</p>
+                        <label class="radio"><input type="radio" name="q22" value="A"><span> A) in</span></label>
+                        <label class="radio"><input type="radio" name="q22" value="B"><span> B) at</span></label>
+                        <label class="radio"><input type="radio" name="q22" value="C"><span> C) the</span></label>
+                        <label class="radio"><input type="radio" name="q22" value="D"><span> D) on</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="C">
+                        <p>23. They ___ in the park every Sunday.</p>
+                        <label class="radio"><input type="radio" name="q23" value="A"><span> A) walking</span></label>
+                        <label class="radio"><input type="radio" name="q23" value="B"><span> B) walks</span></label>
+                        <label class="radio"><input type="radio" name="q23" value="C"><span> C) walk</span></label>
+                        <label class="radio"><input type="radio" name="q23" value="D"><span> D) to walk</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="B">
+                        <p>24. Where ___ on holiday?</p>
+                        <label class="radio"><input type="radio" name="q24" value="A"><span> A) you go</span></label>
+                        <label class="radio"><input type="radio" name="q24" value="B"><span> B) did you
+                                go</span></label>
+                        <label class="radio"><input type="radio" name="q24" value="C"><span> C) went you</span></label>
+                        <label class="radio"><input type="radio" name="q24" value="D"><span> D) you did
+                                go</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="C">
+                        <p>25. I ___ like hamburgers.</p>
+                        <label class="radio"><input type="radio" name="q25" value="A"><span> A) am not</span></label>
+                        <label class="radio"><input type="radio" name="q25" value="B"><span> B) haven’t</span></label>
+                        <label class="radio"><input type="radio" name="q25" value="C"><span> C) don’t</span></label>
+                        <label class="radio"><input type="radio" name="q25" value="D"><span> D) doesn’t</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="B">
+                        <p>26. We’re ___ in a flat at the moment.</p>
+                        <label class="radio"><input type="radio" name="q26" value="A"><span> A) live</span></label>
+                        <label class="radio"><input type="radio" name="q26" value="B"><span> B) living</span></label>
+                        <label class="radio"><input type="radio" name="q26" value="C"><span> C) lives</span></label>
+                        <label class="radio"><input type="radio" name="q26" value="D"><span> D) to live</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="A">
+                        <p>27. How many ___ in New York?</p>
+                        <label class="radio"><input type="radio" name="q27" value="A"><span> A) people
+                                live</span></label>
+                        <label class="radio"><input type="radio" name="q27" value="B"><span> B) does people
+                                live</span></label>
+                        <label class="radio"><input type="radio" name="q27" value="C"><span> C) people
+                                lives</span></label>
+                        <label class="radio"><input type="radio" name="q27" value="D"><span> D) do people
+                                live</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="D">
+                        <p>28. I need ___ to the supermarket.</p>
+                        <label class="radio"><input type="radio" name="q28" value="A"><span> A) go</span></label>
+                        <label class="radio"><input type="radio" name="q28" value="B"><span> B) going</span></label>
+                        <label class="radio"><input type="radio" name="q28" value="C"><span> C) to going</span></label>
+                        <label class="radio"><input type="radio" name="q28" value="D"><span> D) to go</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="C">
+                        <p>29. Our office is ___ the second floor.</p>
+                        <label class="radio"><input type="radio" name="q29" value="A"><span> A) on</span></label>
+                        <label class="radio"><input type="radio" name="q29" value="B"><span> B) at</span></label>
+                        <label class="radio"><input type="radio" name="q29" value="C"><span> C) in</span></label>
+                        <label class="radio"><input type="radio" name="q29" value="D"><span> D) by</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="D">
+                        <p>30. Is he ___?</p>
+                        <label class="radio"><input type="radio" name="q30" value="A"><span> A) America</span></label>
+                        <label class="radio"><input type="radio" name="q30" value="B"><span> B) an
+                                American</span></label>
+                        <label class="radio"><input type="radio" name="q30" value="C"><span> C) a
+                                American</span></label>
+                        <label class="radio"><input type="radio" name="q30" value="D"><span> D) American</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="C">
+                        <p>31. It’s ___ expensive car.</p>
+                        <label class="radio"><input type="radio" name="q31" value="A"><span> A) a</span></label>
+                        <label class="radio"><input type="radio" name="q31" value="B"><span> B) an</span></label>
+                        <label class="radio"><input type="radio" name="q31" value="C"><span> C) the</span></label>
+                        <label class="radio"><input type="radio" name="q31" value="D"><span> D) my</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="A">
+                        <p>32. We ___ go to the cinema at weekends.</p>
+                        <label class="radio"><input type="radio" name="q32" value="A"><span> A) sometimes</span></label>
+                        <label class="radio"><input type="radio" name="q32" value="B"><span> B) not</span></label>
+                        <label class="radio"><input type="radio" name="q32" value="C"><span> C) don’t</span></label>
+                        <label class="radio"><input type="radio" name="q32" value="D"><span> D) do</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="A">
+                        <p>33. There ___ a hospital in my town.</p>
+                        <label class="radio"><input type="radio" name="q33" value="A"><span> A) is</span></label>
+                        <label class="radio"><input type="radio" name="q33" value="B"><span> B) are</span></label>
+                        <label class="radio"><input type="radio" name="q33" value="C"><span> C) isn’t</span></label>
+                        <label class="radio"><input type="radio" name="q33" value="D"><span> D) isn’t</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="B">
+                        <p>34. We went to the same college ___ each other.</p>
+                        <label class="radio"><input type="radio" name="q34" value="A"><span> A) than</span></label>
+                        <label class="radio"><input type="radio" name="q34" value="B"><span> B) as</span></label>
+                        <label class="radio"><input type="radio" name="q34" value="C"><span> C) that</span></label>
+                        <label class="radio"><input type="radio" name="q34" value="D"><span> D) like</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="D">
+                        <p>35. He ___ at home yesterday.</p>
+                        <label class="radio"><input type="radio" name="q35" value="A"><span> A) didn’t
+                                are</span></label>
+                        <label class="radio"><input type="radio" name="q35" value="B"><span> B) wasn’t be</span></label>
+                        <label class="radio"><input type="radio" name="q35" value="C"><span> C) weren’t</span></label>
+                        <label class="radio"><input type="radio" name="q35" value="D"><span> D) wasn’t</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="C">
+                        <p>36. He’s ___ Italy.</p>
+                        <label class="radio"><input type="radio" name="q36" value="A"><span> A) to</span></label>
+                        <label class="radio"><input type="radio" name="q36" value="B"><span> B) for</span></label>
+                        <label class="radio"><input type="radio" name="q36" value="C"><span> C) from</span></label>
+                        <label class="radio"><input type="radio" name="q36" value="D"><span> D) of</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="A">
+                        <p>37. She ___ a student.</p>
+                        <label class="radio"><input type="radio" name="q37" value="A"><span> A) is</span></label>
+                        <label class="radio"><input type="radio" name="q37" value="B"><span> B) are</span></label>
+                        <label class="radio"><input type="radio" name="q37" value="C"><span> C) am</span></label>
+                        <label class="radio"><input type="radio" name="q37" value="D"><span> D) be</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="A">
+                        <p>38. They ___ like pizza.</p>
+                        <label class="radio"><input type="radio" name="q38" value="A"><span> A) don’t</span></label>
+                        <label class="radio"><input type="radio" name="q38" value="B"><span> B) isn’t</span></label>
+                        <label class="radio"><input type="radio" name="q38" value="C"><span> C) doesn’t</span></label>
+                        <label class="radio"><input type="radio" name="q38" value="D"><span> D) aren’t</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="B">
+                        <p>39. He’s from London, ___?</p>
+                        <label class="radio"><input type="radio" name="q39" value="A"><span> A) is he</span></label>
+                        <label class="radio"><input type="radio" name="q39" value="B"><span> B) isn’t he</span></label>
+                        <label class="radio"><input type="radio" name="q39" value="C"><span> C) he isn’t</span></label>
+                        <label class="radio"><input type="radio" name="q39" value="D"><span> D) he is</span></label>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="question" data-correct="B">
+                        <p>40. ___ many cups of tea did you drink?</p>
+                        <label class="radio"><input type="radio" name="q40" value="A"><span> A) Who</span></label>
+                        <label class="radio"><input type="radio" name="q40" value="B"><span> B) How</span></label>
+                        <label class="radio"><input type="radio" name="q40" value="C"><span> C) What</span></label>
+                        <label class="radio"><input type="radio" name="q40" value="D"><span> D) Why</span></label>
+                    </div>
+                </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#question-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#question-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <button id="submit-btn" class="btn btn-primary">Submit</button>
+        <div id="result" hidden style="height: 0;"></div>
+        <p style="    text-align: center;font-family: 'Roboto', sans-serif;font-weight: 300;font-style: normal;"><i>made
+                by Mouad Coding For Teacher Ms.Messahel <br> (This is currently a Placeholder for now)</i></p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>
