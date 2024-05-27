@@ -35,15 +35,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        fetch('https://api.ipify.org?format=json')
-            .then(response => response.json())
-            .then(data => {
-                // Process the response JSON data here
-                console.log(data);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
         document.getElementById('myForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent the default form submission
 
@@ -51,7 +42,6 @@
 
             if (codeInput.length === 5) {
                 var payload = { 'code': codeInput };
-                console.log(JSON.stringify(payload));
                 fetch('https://mouadcoding.pythonanywhere.com/confirm', {
                     method: 'POST',
                     headers: {
@@ -61,8 +51,6 @@
                 })
                     .then(response => response.json())
                     .then(data => {
-                        // Process the response JSON data here
-                        console.log(data);
                     })
                     .catch(error => {
                         console.error('Error:', error);
