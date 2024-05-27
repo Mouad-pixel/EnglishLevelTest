@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="helpless">
 
 <head>
     <link rel="icon" type="image/x-icon"
@@ -56,16 +56,20 @@
         // Example usage
         const owner = 'Mouad-pixel';
         const repo = 'englishleveltest';
-        const filePath = 'Templates/A1.html';
+        filePath1 = 'Templates/A1.html';
 
-        fetchFileContents(owner, repo, filePath)
+        fetchFileContents(owner, repo, filePath1)
             .then(content => {
-                console.log('File content:', content);
+                filecontentA1 = content
             });
+        filePath2 = 'Templates/A2.html';
 
+        fetchFileContents(owner, repo, filePath2)
+            .then(content => {
+                filecontentA2 = content
+            });
         document.getElementById('myForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the default form submission
-
+            event.preventDefault();
             var codeInput = document.getElementById('code').value;
 
             if (codeInput.length === 5) {
@@ -79,6 +83,15 @@
                 })
                     .then(response => response.json())
                     .then(data => {
+                        if (data.difficulty == "A1") {
+                            document.getElementById("helpless").innerHTML = filecontentA1
+                        }
+                        else if (data.difficulty == "A2") {
+                            document.getElementById("helpless").innerHTML = filecontentA2
+                        }
+                        else {
+                            console.log("hopeless")
+                        }
                     })
                     .catch(error => {
                         console.error('Error:', error);
