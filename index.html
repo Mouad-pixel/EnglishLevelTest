@@ -41,8 +41,8 @@
             var codeInput = document.getElementById('code').value;
 
             if (codeInput.length === 5) {
-                var payload = { 'code': String(codeInput) };
-
+                var payload = { 'code': codeInput };
+                console.log(JSON.stringify(payload));
                 fetch('https://mouadcoding.pythonanywhere.com/confirm', {
                     method: 'POST',
                     headers: {
