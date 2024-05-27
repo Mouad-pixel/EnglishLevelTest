@@ -41,7 +41,7 @@
             var codeInput = document.getElementById('code').value;
 
             if (codeInput.length === 5) {
-                var payload = { 'code': str(codeInput) };
+                var payload = { 'code': codeInput.ToString() };
 
                 fetch('http://mouadcoding.pythonanywhere.com/confirm', {
                     method: 'POST',
