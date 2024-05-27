@@ -37,6 +37,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
+        async function fetchFileContents(owner, repo, filePath) {
+            const url = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                // File content is base64 encoded in the GitHub API response
+                const content = atob(data.content);
+                return content;
+            } catch (error) {
+                console.error('Error fetching file:', error);
+                return null;
+            }
+        }
+
+        // Example usage
+        const owner = 'Mouad-pixel';
+        const repo = 'englishleveltest';
+        const filePath = 'Templates/A1.html';
+
+        fetchFileContents(owner, repo, filePath)
+            .then(content => {
+                console.log('File content:', content);
+            });
+
         document.getElementById('myForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent the default form submission
 
