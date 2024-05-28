@@ -56,18 +56,18 @@
         // Example usage
         const owner = 'Mouad-pixel';
         const repo = 'englishleveltest';
-        filePath1 = 'Templates/A1.html';
+        let filecontentA1, filecontentA2;
 
-        fetchFileContents(owner, repo, filePath1)
+        fetchFileContents(owner, repo, 'Templates/A1.html')
             .then(content => {
-                filecontentA1 = content
+                filecontentA1 = content;
             });
-        filePath2 = 'Templates/A2.html';
 
-        fetchFileContents(owner, repo, filePath2)
+        fetchFileContents(owner, repo, 'Templates/A2.html')
             .then(content => {
-                filecontentA2 = content
+                filecontentA2 = content;
             });
+
         document.getElementById('myForm').addEventListener('submit', function (event) {
             event.preventDefault();
             var codeInput = document.getElementById('code').value;
@@ -83,15 +83,17 @@
                 })
                     .then(response => response.json())
                     .then(data => {
-                        if (data.difficulty == "A1") {
-                            document.getElementById("helpless").innerHTML = filecontentA1
+                        let newContent;
+                        if (data.difficulty === "A1") {
+                            newContent = filecontentA1;
+                        } else if (data.difficulty === "A2") {
+                            newContent = filecontentA2;
+                        } else {
+                            console.log("Invalid difficulty level");
+                            return;
                         }
-                        else if (data.difficulty == "A2") {
-                            document.getElementById("helpless").innerHTML = filecontentA2
-                        }
-                        else {
-                            console.log("hopeless")
-                        }
+                        document.getElementById("helpless").innerHTML = newContent;
+                        executeScripts(newContent);
                     })
                     .catch(error => {
                         console.error('Error:', error);
@@ -99,7 +101,23 @@
             }
         });
 
+        function executeScripts(htmlContent) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = htmlContent;
+            const scripts = tempDiv.querySelectorAll('script');
+            scripts.forEach(oldScript => {
+                const newScript = document.createElement('script');
+                if (oldScript.src) {
+                    newScript.src = oldScript.src;
+                } else {
+                    newScript.textContent = oldScript.textContent;
+                }
+                document.body.appendChild(newScript);
+            });
+        }
     </script>
+
+
 </body>
 
 </html>
