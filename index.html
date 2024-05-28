@@ -89,7 +89,7 @@
                         } else if (data.difficulty === "A2") {
                             newContent = filecontentA2;
                         } else {
-                            console.log("Invalid difficulty level");
+                            console.log(`Invalid difficulty level ${data.difficulty}`);
                             return;
                         }
                         document.getElementById("helpless").innerHTML = newContent;
