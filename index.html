@@ -70,6 +70,10 @@
             .then(content => {
                 filecontentA2 = content;
             });
+        fetchFileContents(owner, repo, 'Templates/A3.html')
+            .then(content => {
+                filecontentA3 = content;
+            });
 
         document.getElementById('myForm').addEventListener('submit', function (event) {
             event.preventDefault();
@@ -93,6 +97,9 @@
                         } else if (data.difficulty === "A2") {
                             document.getElementById("thing").innerHTML = "Valid Code! Difficulty found: " + data.difficulty + ". Starting test...";
                             newContent = filecontentA2
+                        } else if (data.difficulty === "A3") {
+                            document.getElementById("thing").innerHTML = "Valid Code! Difficulty found: " + data.difficulty + ". Starting test...";
+                            newContent = filecontentA3
                         } else {
                             document.getElementById("thing").innerHTML = "Sorry, but it seems the the code is invalid. Please try again.";
                             return;
