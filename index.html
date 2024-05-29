@@ -94,12 +94,39 @@
                         if (data.difficulty === "A1") {
                             document.getElementById("thing").innerHTML = "Valid Code! Difficulty found: " + data.difficulty + ". Starting test...";
                             newContent = filecontentA1;
+                            var payload = { 'code': codeInput };
+                            fetch('https://mouadcoding.pythonanywhere.com/delete', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify(payload)
+                            })
+                                .then(response => response.json())
                         } else if (data.difficulty === "A2") {
                             document.getElementById("thing").innerHTML = "Valid Code! Difficulty found: " + data.difficulty + ". Starting test...";
                             newContent = filecontentA2
+                            var payload = { 'code': codeInput };
+                            fetch('https://mouadcoding.pythonanywhere.com/delete', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify(payload)
+                            })
+                                .then(response => response.json())
                         } else if (data.difficulty === "A3") {
                             document.getElementById("thing").innerHTML = "Valid Code! Difficulty found: " + data.difficulty + ". Starting test...";
                             newContent = filecontentA3
+                            var payload = { 'code': codeInput };
+                            fetch('https://mouadcoding.pythonanywhere.com/delete', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify(payload)
+                            })
+                                .then(response => response.json())
                         } else {
                             document.getElementById("thing").innerHTML = "Sorry, but it seems the the code is invalid. Please try again.";
                             return;
