@@ -37,6 +37,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
         async function fetchFileContents(owner, repo, filePath) {
             const url = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`;
 
@@ -85,11 +88,13 @@
                     .then(data => {
                         let newContent;
                         if (data.difficulty === "A1") {
-                            newContent = filecontentA1;
+                            document.getElementById("thing").innerHTML = "Valid Code! Difficulty found: " + data.difficulty + ". Starting test...";
+                            sleep(3000).then(() => { newContent = filecontentA1; });
                         } else if (data.difficulty === "A2") {
-                            newContent = filecontentA2;
+                            document.getElementById("thing").innerHTML = "Valid Code! Difficulty found: " + data.difficulty + ". Starting test...";
+                            sleep(3000).then(() => { newContent = filecontentA2; });
                         } else {
-                            console.log(`Invalid difficulty level ${data.difficulty}`);
+                            document.getElementById("thing").innerHTML = "Sorry, but it seems the the code is invalid. Please try again.";
                             return;
                         }
                         document.getElementById("helpless").innerHTML = newContent;
