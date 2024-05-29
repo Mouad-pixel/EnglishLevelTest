@@ -89,10 +89,10 @@
                         let newContent;
                         if (data.difficulty === "A1") {
                             document.getElementById("thing").innerHTML = "Valid Code! Difficulty found: " + data.difficulty + ". Starting test...";
-                            sleep(3000).then(() => { newContent = filecontentA1; });
+                            newContent = filecontentA1;
                         } else if (data.difficulty === "A2") {
                             document.getElementById("thing").innerHTML = "Valid Code! Difficulty found: " + data.difficulty + ". Starting test...";
-                            sleep(3000).then(() => { newContent = filecontentA2; });
+                            newContent = filecontentA2
                         } else {
                             document.getElementById("thing").innerHTML = "Sorry, but it seems the the code is invalid. Please try again.";
                             return;
