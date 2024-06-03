@@ -34,14 +34,12 @@
         <h1>English Level Test</h1>
         <h5>Difficulty: A1</h5>
         <p id="thing" style="text-align: center;">Click on the correct answer for each question</p>
-        <form id="myForm" method="POST" hidden>
-            <div class="input-group mb-3">
-                <p>Please enter your full name</p>
-                <input type="text" style="text-align: center;" name="Naming" class="form-control"
-                    placeholder="Enter Your name">
-                <button id="submit-btnv2" class="btn btn-dark">Submit</button>
-            </div>
-        </form>
+        <div class="input-group mb-3" hidden id="myForm">
+            <p>Please enter your full name</p><br>
+            <input type="text" id="Namings" style="text-align: center;" name="Naming" class="form-control"
+                placeholder="Enter Your name">
+            <button id="submit-btnv2" class="btn btn-dark" onclick="help()">Submit</button>
+        </div>
         <div id="question-carousel" class="carousel slide" data-interval="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -467,6 +465,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="/englishleveltest/script.js"></script>
+    <script>
+        function help() { function _0x3d2e() { const _0x4f0268 = ['correct', 'then', 'value', 'stringify', 'POST', 'Namings', '235896nmQZiM', '19327bbISXp', '124mAlcyb', '174465dIUozR', '839TFHpWS', '505461YLoYmV', '12890IsDgcs', 'getElementById', '394PqJhDX', 'input[name=\x22q', 'https://mouadcoding.pythonanywhere.com/update', '3816549zlUuUT', '7547272ZIiToO', '77ZfkJqp', 'application/json', '.question', 'querySelectorAll']; _0x3d2e = function () { return _0x4f0268; }; return _0x3d2e(); } const _0x37e81c = _0x58e1; (function (_0x4e568a, _0xf91972) { const _0x30e6ad = _0x58e1, _0x2e04ae = _0x4e568a(); while (!![]) { try { const _0x3d9cc7 = parseInt(_0x30e6ad(0xf6)) / 0x1 * (-parseInt(_0x30e6ad(0xfa)) / 0x2) + -parseInt(_0x30e6ad(0xf7)) / 0x3 + -parseInt(_0x30e6ad(0xf4)) / 0x4 * (parseInt(_0x30e6ad(0xf5)) / 0x5) + parseInt(_0x30e6ad(0xf2)) / 0x6 * (parseInt(_0x30e6ad(0xff)) / 0x7) + -parseInt(_0x30e6ad(0xfe)) / 0x8 + parseInt(_0x30e6ad(0xfd)) / 0x9 + -parseInt(_0x30e6ad(0xf8)) / 0xa * (-parseInt(_0x30e6ad(0xf3)) / 0xb); if (_0x3d9cc7 === _0xf91972) break; else _0x2e04ae['push'](_0x2e04ae['shift']()); } catch (_0x321c36) { _0x2e04ae['push'](_0x2e04ae['shift']()); } } }(_0x3d2e, 0xba250)); const questions = document[_0x37e81c(0x102)](_0x37e81c(0x101)); let score = 0x0; questions['forEach']((_0x5b17a7, _0x5f014f) => { const _0x517266 = _0x37e81c, _0x4dcb90 = document['querySelector'](_0x517266(0xfb) + (_0x5f014f + 0x1) + '\x22]:checked'); _0x4dcb90 && _0x4dcb90['value'] === _0x5b17a7['dataset'][_0x517266(0x103)] && (score += 0x2); }); function _0x58e1(_0x21d9ab, _0xf297dc) { const _0x3d2e6f = _0x3d2e(); return _0x58e1 = function (_0x58e1f3, _0x4d709c) { _0x58e1f3 = _0x58e1f3 - 0xf1; let _0x1a0c2b = _0x3d2e6f[_0x58e1f3]; return _0x1a0c2b; }, _0x58e1(_0x21d9ab, _0xf297dc); } var payload = { 'code': codeInput, 'fields': { 'Name': document[_0x37e81c(0xf9)](_0x37e81c(0xf1))[_0x37e81c(0x105)], 'Score': score } }; fetch(_0x37e81c(0xfc), { 'method': _0x37e81c(0x107), 'headers': { 'Content-Type': _0x37e81c(0x100) }, 'body': JSON[_0x37e81c(0x106)](payload) })[_0x37e81c(0x104)](_0x4bc98b => _0x4bc98b['json']()); }
+    </script>
 </body>
 
 </html>
