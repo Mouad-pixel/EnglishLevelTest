@@ -95,8 +95,8 @@
                         if (data.difficulty === "A1") {
                             document.getElementById("thing").innerHTML = "Valid Code! Difficulty found: " + data.difficulty + ". Starting test...";
                             newContent = filecontentA1;
-                            var payload = { 'code': codeInput };
-                            fetch('https://mouadcoding.pythonanywhere.com/delete', {
+                            var payload = { 'code': codeInput, 'fields': { "code_used": true } };
+                            fetch('https://mouadcoding.pythonanywhere.com/update', {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json'
@@ -107,8 +107,8 @@
                         } else if (data.difficulty === "A2") {
                             document.getElementById("thing").innerHTML = "Valid Code! Difficulty found: " + data.difficulty + ". Starting test...";
                             newContent = filecontentA2
-                            var payload = { 'code': codeInput };
-                            fetch('https://mouadcoding.pythonanywhere.com/delete', {
+                            var payload = { 'code': codeInput, 'fields': { "code_used": true } };
+                            fetch('https://mouadcoding.pythonanywhere.com/update', {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json'
@@ -119,8 +119,8 @@
                         } else if (data.difficulty === "A3") {
                             document.getElementById("thing").innerHTML = "Valid Code! Difficulty found: " + data.difficulty + ". Starting test...";
                             newContent = filecontentA3
-                            var payload = { 'code': codeInput };
-                            fetch('https://mouadcoding.pythonanywhere.com/delete', {
+                            var payload = { 'code': codeInput, 'fields': { "code_used": true } };
+                            fetch('https://mouadcoding.pythonanywhere.com/update', {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json'
